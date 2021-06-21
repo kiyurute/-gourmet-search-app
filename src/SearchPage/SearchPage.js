@@ -366,7 +366,10 @@ const pagenation = (val) => {
       </div>
     </div>
 
-    <div className="search-box p-3" style={{background:'white'}}>
+    <div className="search-box p-3 pt-4 px-5" style={{background:'white'}}>
+      <div className="row">
+
+        <div className="col-md-4">
         <div className="d-flex flex-row">
             <div className="col-4 p-2">
                 <p className="search-label text-right" style={{textAlign:'right'}}>検索半径</p>
@@ -382,7 +385,9 @@ const pagenation = (val) => {
             </select>
             </div>
         </div>
+        </div>
 
+        <div className="col-md-4">
         <div className="d-flex flex-row">
             <div className="col-4 p-2">
                 <p className="search-label text-right" style={{textAlign:'right'}}>キーワード</p>
@@ -392,9 +397,11 @@ const pagenation = (val) => {
             <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" id="keyword"/>
             </div>
         </div>
+        </div>
 
+        <div className="col-md-4">
         <div className="d-flex flex-row">
-        <div className="col-4 p-2">
+            <div className="col-4 p-2">
                 <p className="search-label text-right" style={{textAlign:'right'}}>表示順</p>
             </div>
 
@@ -411,7 +418,8 @@ const pagenation = (val) => {
                 </div>
             </div>
         </div>
-
+        </div>
+      </div>
 
     </div>
       
