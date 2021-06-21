@@ -96,8 +96,7 @@ function SearchPage() {
     console.log(keyword);
 
     const successCallBack = (position) => {
-    
-      let URL = "//webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+position.coords.latitude+"&lng="+position.coords.longitude+"&range="+val+"&start=1"+"&keyword="+keyword+"&order="+sort;
+      let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+position.coords.latitude+"&lng="+position.coords.longitude+"&range="+val+"&start=1"+"&keyword="+keyword+"&order="+sort;
 
       window.sessionStorage.setItem('myLat',position.coords.latitude);
       window.sessionStorage.setItem('myLng',position.coords.longitude);
@@ -198,18 +197,9 @@ function SearchPage() {
 
     const errorCallBack = (error) => {
       console.log(error);
-      window.alert(error);
     }
 
-    const getGps = () => {
-      if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(successCallBack,errorCallBack);
-      }else{
-        window.alert('位置情報を取得できません');
-        window.alert(navigator.geolocation);
-      }
-    }
-    
+    navigator.geolocation.getCurrentPosition(successCallBack,errorCallBack);
 
   }
 
@@ -250,8 +240,7 @@ const pagenation = (val) => {
     console.log(val+"ページ");
     let startFrom = (parseInt(val-1)*10);
     console.log('startFrom:'+startFrom);
-    // let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
-    let URL = "//webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
+    let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
     console.log('url;'+URL);
     $.ajax({
         url: URL,
@@ -388,7 +377,7 @@ const pagenation = (val) => {
             </div>
 
             <div className="col-8">
-            <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" id="keyword"/>
+            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" id="keyword"/>
             </div>
         </div>
 
@@ -451,7 +440,7 @@ const pagenation = (val) => {
       <div className="row overflow-auto p-2">
         
             <nav aria-label="..." className="p-0">
-                <ul className="pagination">
+                <ul class="pagination">
 
 
                   {pageArr.map((element,key) => {
