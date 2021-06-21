@@ -210,6 +210,7 @@ function SearchPage() {
       }
     }
     
+    getGps();
 
   }
 
