@@ -137,7 +137,6 @@ const ShopList = (props) => {
     useEffect(() => {
         if(sessionStorage.getItem('favId')){
             let favIdArr = sessionStorage.getItem('favId').split(',');
-            console.log(favIdArr);
         
             let favCheck = favIdArr.indexOf(props.id);
 
