@@ -4,26 +4,21 @@ import $ from 'jquery';
 import { BrowserRouter as Router , Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import SearchPage from './SearchPage/SearchPage.js';
+import Detail from './Detail/Detail.js';
+import Favorite from './Favorite/Favorite.js';
+import FavDetail from './FavDetail/FavDetail.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          this is gourmet-search-app
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Route path='/' exact component={SearchPage} />
+        <Route path='/detail' component={Detail} />
+        <Route path='/favorite' component={Favorite} />
+        <Route path='/favdetail' component={FavDetail} />
+        {/* <Route path='/entrance' component={Entrance} />
+        <Route path='/ready' component={Ready} />
+        <Route path='/game' component={Game} /> */}
+    </Router>
   );
 }
 
