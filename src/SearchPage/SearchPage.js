@@ -96,7 +96,7 @@ function SearchPage() {
     console.log(keyword);
 
     const successCallBack = (position) => {
-      // let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+position.coords.latitude+"&lng="+position.coords.longitude+"&range="+val+"&start=1"+"&keyword="+keyword+"&order="+sort;
+    
       let URL = "//webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+position.coords.latitude+"&lng="+position.coords.longitude+"&range="+val+"&start=1"+"&keyword="+keyword+"&order="+sort;
 
       window.sessionStorage.setItem('myLat',position.coords.latitude);
@@ -198,6 +198,7 @@ function SearchPage() {
 
     const errorCallBack = (error) => {
       console.log(error);
+      window.alert(error);
     }
 
     navigator.geolocation.getCurrentPosition(successCallBack,errorCallBack);
