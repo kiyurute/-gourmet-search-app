@@ -377,7 +377,7 @@ const pagenation = (val) => {
             </div>
 
             <div className="col-8">
-            <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" id="keyword"/>
+            <input type="text" className="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" id="keyword"/>
             </div>
         </div>
 
@@ -440,7 +440,7 @@ const pagenation = (val) => {
       <div className="row overflow-auto p-2">
         
             <nav aria-label="..." className="p-0">
-                <ul class="pagination">
+                <ul className="pagination">
 
 
                   {pageArr.map((element,key) => {
