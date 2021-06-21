@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import $ from 'jquery';
+import { BrowserRouter as Router , Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import SearchPage from './SearchPage/SearchPage.js';
 
 function App() {
   return (
