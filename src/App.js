@@ -10,15 +10,23 @@ import FavDetail from './FavDetail/FavDetail.js';
 
 function App() {
   return (
-    <Router>
-        <Route path='/' exact component={SearchPage} />
-        <Route path='/detail' component={Detail} />
-        <Route path='/favorite' component={Favorite} />
-        <Route path='/favdetail' component={FavDetail} />
-        {/* <Route path='/entrance' component={Entrance} />
-        <Route path='/ready' component={Ready} />
-        <Route path='/game' component={Game} /> */}
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+          this is gourmet-search-app
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
