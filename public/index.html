@@ -54,5 +54,27 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <a href="http://webservice.recruit.co.jp/"><img src="http://webservice.recruit.co.jp/banner/hotpepper-s.gif" alt="ホットペッパー Webサービス" width="135" height="17" border="0" title="ホットペッパー Webサービス"></a>
+    <script>
+      function getGps(){
+        if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(successFunc,errorFunc);
+        }else{
+          window.alert('位置情報を取得できません');
+        }
+      }
+
+      function successFunc(position){
+        let crd = position.coords;
+        window.alert(crd.latitude)
+      }
+
+      function errorFunc(error){
+        window.alert(error);
+      }
+
+      window.addEventListener('DOMContentLoaded',function(){
+        getGps();
+      },false)
+    </script>
   </body>
 </html>
