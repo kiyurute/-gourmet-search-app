@@ -240,7 +240,8 @@ const pagenation = (val) => {
     console.log(val+"ページ");
     let startFrom = (parseInt(val-1)*10);
     console.log('startFrom:'+startFrom);
-    let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
+    // let URL = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
+    let URL = "//webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=3e16c33a658d883f&large_area=Z011&format=jsonp&lat="+sessionStorage.getItem('myLat')+"&lng="+sessionStorage.getItem('myLng')+"&range="+sessionStorage.getItem('range')+"&start="+startFrom;
     console.log('url;'+URL);
     $.ajax({
         url: URL,
